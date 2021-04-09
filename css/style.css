@@ -1,0 +1,42 @@
+:root{
+  font-family: 'Roboto', sans-serif;
+}
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+nav, footer{
+  background-color: rgb(34, 34, 34);
+}
+.logo-img{
+  width: 50px;
+  margin-top: -10px;
+}
+.landing-div{
+  background-image: url('../images/library.jpg');
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+.card img{
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+.login-btn:hover{
+  color: 0062E6;
+  background-color: 33AEFF;
+}
+.center-text{
+  background-color: rgb(33,37,41);
+  border-radius: 20px;
+  background-size:auto;
+  color: white;
+  margin-top: 15%;
+  padding: 1% 2% 1% 2%;
+}
+/* .cards{
+  margin-top: 5vh;
+} */
+.footer-nav-a{
+  color: white;
+}
