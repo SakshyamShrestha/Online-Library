@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/forms.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"rel="stylesheet"/>
-    <title>Hello, world!</title>
+    <title>LMS</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -27,9 +27,7 @@
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'categories' %}">Categories</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Request a book</a>
-            </li>
+           
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact</a>
             </li>
@@ -75,18 +73,18 @@
         <div class="row">
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <ul class="list-unstyled mb-0">
+              <ul class="list-unstyled mb-0">
                 <li class="nav-item">
-                    <a class="nav-link active footer-nav-a" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active footer-nav-a" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active footer-nav-a" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active footer-nav-a" aria-current="page" href="{% url 'categories' %}">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active footer-nav-a" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active footer-nav-a" aria-current="page" href="{% url 'contact' %}">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active footer-nav-a" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active footer-nav-a" aria-current="page" href="{% url 'login' %}">Login</a>
                 </li>
             </ul>
             </div>
