@@ -5,26 +5,14 @@
     <a
       href="#"
       class="list-group-item list-group-item-action bg-dark active py-4"
-    >
-      Book Genres
+    >Book Genres
     </a>
+
+	  {% for page in all_pages_list %}
     <a href="#" class="list-group-item list-group-item-action py-3"
-      >Programming</a
+				>{{ page }}</a
     >
-    <a href="#" class="list-group-item list-group-item-action py-3"
-      >Literature</a
-    >
-    <a href="#" class="list-group-item list-group-item-action py-3"
-      >Non-Fiction</a
-    >
-    <a href="#" class="list-group-item list-group-item-action py-3"
-      >Magazines</a
-    >
-    <a href="#" class="list-group-item list-group-item-action py-3">Business</a>
-    <a href="#" class="list-group-item list-group-item-action py-3">History</a>
-    <a href="#" class="list-group-item list-group-item-action py-3"
-      >Artificial Intelligene</a
-    >
+	{% endfor %}
   </div>
 </section>
 {% endblock content %}
