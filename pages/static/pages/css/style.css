@@ -17,10 +17,11 @@ nav, footer{
   width: 100%;
   background-repeat: no-repeat;
 }
-.card img{
+.card-img-top{
   width: 100%;
-  max-width: 200px;
-  height: auto;
+  max-width: 180px;
+  max-height: 275px;
+  overflow: hidden;
 }
 .login-btn:hover{
   color: 0062E6;
@@ -34,9 +35,10 @@ nav, footer{
   margin-top: 15%;
   padding: 1% 2% 1% 2%;
 }
-/* .cards{
-  margin-top: 5vh;
-} */
+
 .footer-nav-a{
   color: white;
+}
+.footer{
+  margin-top: 50px;
 }
