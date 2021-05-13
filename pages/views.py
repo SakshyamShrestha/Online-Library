@@ -1,3 +1,4 @@
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from .models import Categories
 from .models import Contact
@@ -17,10 +18,19 @@ class HomePageView(ListView):
     # queryset = Book.object.all()
 
 
-class CategoriesView(ListView):
-    model = Categories
-    template_name = 'pages/categories.html'
-    context_object_name = 'all_pages_list'
+# class CategoriesView(ListView):
+#     model = Categories
+#     template_name = 'pages/categories.html'
+#     context_object_name = 'all_pages_list'
+
+def categories(request):
+    categories = Categories.objects.all() 
+    return render(request, 'pages/categories.html', {'categories':categories})
+
+# Function based view for slug
+def category(request, slug): 
+    category = Categories.objects.get(slug=slug)
+    return render(request, 'pages/category.html', {'category': category})
 
 
 class BookreqView(TemplateView):
