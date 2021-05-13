@@ -26,9 +26,12 @@ class CategoriesView(ListView):
 class BookreqView(TemplateView):
     template_name = 'pages/bookreq.html'
 
+class FaqView(TemplateView):
+    model = Contact
+    template_name = 'pages/faq.html'
+
 
 class ContactView(TemplateView):
-    model = Contact
     template_name = 'pages/contact.html'
 
 def contact(request):
