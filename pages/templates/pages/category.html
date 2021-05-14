@@ -1,0 +1,9 @@
+{% extends 'pages/base.html' %} 
+{% load static %}
+{% block content %}
+    <section class="cat-body container py-5">
+        {% for category in categories%}
+        <a href="{% url 'category' category.slug %}" class="list-group-item list-group-item-action py-3">{{ category }}</a>
+    {% endfor %}
+    </section>
+{% endblock %}

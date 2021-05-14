@@ -8,9 +8,9 @@
     >Book Genres
     </a>
 
-	  {% for page in all_pages_list %}
-    <a href="#" class="list-group-item list-group-item-action py-3"
-				>{{ page }}</a
+	  {% for category in categories%}
+    <a href="{% url 'category' category.slug %}" class="list-group-item list-group-item-action py-3"
+				>{{ category }}</a
     >
 	{% endfor %}
   </div>

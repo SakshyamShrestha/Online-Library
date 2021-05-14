@@ -1,12 +1,14 @@
 from django.contrib import admin
-from .models import Categories
-from .models import Books
-from .models import Contact
+from .models import *
 
 # Register your models here.
 
 admin.site.register(Categories)
 admin.site.register(Books)
+
+@admin.register(BookRequest)
+class BookRequest(admin.ModelAdmin):
+    list_display = ('id', 'full_name', 'book_name', 'email', 'date')
 
 @admin.register(Contact)
 class Contact(admin.ModelAdmin):

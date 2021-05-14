@@ -9,16 +9,15 @@
           Request a Book
         </div>
         <div class="card-body">
-          <form method="POST">
-            {{ form.as_p }}
+          <form method="POST" action="/new_bookreq/">
             {% csrf_token %}
-            <div class="form-group py-2">
-              <label for="name">Full Name</label>
-              <input name="name" type="text" class="form-control" id="name" placeholder="Enter name" required />
+             <div class="form-group py-2">
+                <label for="full_name">Full Name</label>
+                <input name="full_name" type="text" class="form-control" id="full_name" placeholder="Enter Full name" required />
             </div>
             <div class="form-group py-2">
-                <label for="name">Book Name</label>
-                <input name="book" type="text" class="form-control" id="name" placeholder="Enter Book name" required />
+                <label for="book_name">Book Name</label>
+                <input name="book_name" type="text" class="form-control" id="book_name" placeholder="Enter Book name" required />
             </div>
             <div class="form-group py-2">
               <label for="email">Email address</label>

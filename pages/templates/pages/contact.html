@@ -9,8 +9,7 @@
           Contact us.
         </div>
         <div class="card-body">
-          <form method="POST">
-            {{ form.as_p }}
+          <form method="POST" action="/new_contact/">
             {% csrf_token %}
             <div class="form-group py-3">
               <label for="name">Full Name</label>

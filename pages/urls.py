@@ -1,12 +1,15 @@
-# pages/urls.py
-
 from django.urls import path
-from .views import HomePageView, CategoriesView, ContactView, BookreqView
+from .views import HomePageView, ContactView, BookreqView, FaqView, new_contact, new_bookreq
+from . import views 
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
-    path('categories/', CategoriesView.as_view(), name='categories'),
-    path('contact/', ContactView.as_view(), name='contact'),
-    path('bookreq/', BookreqView.as_view(), name='bookreq'),
-
+    # path('categories/', CategoriesView.as_view(), name='categories'),
+    path('categories/', views.categories, name='categories'),
+    path('categories/<slug:slug>/', views.category, name='category'), 
+    path('contact/', views.ContactView, name='contact'),
+    path('faq/', FaqView.as_view(), name='faq'),
+    path('bookreq/', views.BookreqView, name='bookreq'),
+    path('new_contact/', views.new_contact, name='new_contact'),
+    path('new_bookreq/', views.new_bookreq, name='new_bookreq'),
 ]
