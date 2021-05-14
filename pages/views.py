@@ -33,18 +33,16 @@ def category(request, slug):
     return render(request, 'pages/category.html', {'category': category})
 
 
-class BookreqView(TemplateView):
-    template_name = 'pages/bookreq.html'
+def BookreqView(request):
+    return render(request, 'pages/bookreq.html')
+
 
 class FaqView(TemplateView):
     model = Contact
     template_name = 'pages/faq.html'
 
-
-class ContactView(TemplateView):
-    template_name = 'pages/contact.html'
-
-def contact(request):
+def ContactView(request):
+    return render(request, 'pages/contact.html')
     if request.method == "POST":
         contact = Contact()
         name = request.POST.get('name')
