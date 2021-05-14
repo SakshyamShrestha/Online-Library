@@ -43,14 +43,12 @@ class FaqView(TemplateView):
 
 def ContactView(request):
     return render(request, 'pages/contact.html')
-    if request.method == "POST":
-        contact = Contact()
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
-        contact.name = name
-        contact.email = email
-        contact.message = message
-        contact.save()
-        return HttpResponse ("<h2>Thanks for contacting us</h2>")
+
+def new_contact(request):
+    name = request.POST.get('name')
+    email = request.POST.get('email')
+    message = request.POST.get('message')
+    contact_details = Contact(name=name, email=email, message=message)
+    contact_details.save()
+    
     return render(request, 'pages/contact.html')
