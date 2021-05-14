@@ -39,19 +39,13 @@
     </nav>
       <form method="POST" style="border:1px solid #ccc">
         {% csrf_token %}
+        <hr>
         <div class="container">
           <h1>Sign Up</h1>
           <p>Please fill in this form to create an account.</p>
 
-              <hr>
-              <label for="text"><b>Username</b></label>
-              {{ form.username }}
-
-              <label for="psw"><b>Password</b></label>
-              {{ form.password1 }}
-
-              <label for="psw-repeat"><b>Repeat Password</b></label>
-              {{ form.password2 }}
+          <hr>
+          {{ form.as_p }}
 
           <p>By creating an account you agree to the <a href="#" style="color:dodgerblue">Library code of conduct</a>.</p>
       
@@ -59,7 +53,9 @@
             <button type="submit" class="btn btn-lg btn-primary">Sign Up</button>
           </div>
         </div>
+        <hr>
       </form>
+
   <!-- Footer -->
     <footer class="bg-dark text-center text-white">
     <!-- Grid container -->
