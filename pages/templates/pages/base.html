@@ -18,6 +18,31 @@
       rel="stylesheet"
     />
     <title>LMS</title>
+    <style>
+      .footer-nav-a:hover {
+        transform: translateY(-4px);
+        transition:0.3s;
+        color: white;
+      }
+      .foot-icons{
+        font-size: 30px; 
+      }
+      .social-icon {
+      color: white;
+      background: #221B14; 
+      font-size:0.8em;
+      border-radius: 50%;
+      line-height: 2.2em;
+      width: 2.1em;
+      height: 2.1em;
+      text-align: center;
+      display: inline-block;
+    }
+    .foot-ul li:hover {
+    transform: translateY(-4px);
+    transition:0.3s;
+    }
+    </style>
   </head>
   <body>
     {% include 'pages/navbar.html' %} {% block content %} {% endblock %}
@@ -82,6 +107,14 @@
                   >
                 </li>
               </ul>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 foot-icons" style="margin-left: 100px;">
+              <ul class="list-inline mt-5 foot-ul">
+                <li class="list-inline-item"><a href="https://www.facebook.com/heraldcollegektm/" target="_blank" ><i class="fab fa-facebook social-icon"></i></a></li>
+                <li class="list-inline-item"><a href="mailto:info@heraldcollege.edu.np" target="_blank" ><i class="fas fa-envelope social-icon"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.linkedin.com/school/herald-college-kathmandu/https://www.linkedin.com/school/herald-college-kathmandu/" target="_blank" ><i class="fab fa-linkedin social-icon"></i></a></li>
+             </ul>
             </div>
             <!--Grid column-->
           </div>

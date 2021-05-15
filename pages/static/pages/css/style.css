@@ -7,6 +7,13 @@
 nav, footer{
   background-color: rgb(34, 34, 34);
 }
+.menu-nav li{
+  padding: 1px 2px;
+}
+.menu-nav li:hover{
+  border-bottom: 2px white solid;
+  padding: 0px 2px;
+}
 .logo-img{
   width: 50px;
   margin-top: -10px;
@@ -28,12 +35,12 @@ nav, footer{
   background-color: 33AEFF;
 }
 .center-text{
-  background-color: rgb(33,37,41);
   border-radius: 20px;
   background-size:auto;
   color: white;
   margin-top: 15%;
   padding: 1% 2% 1% 2%;
+  background-color: rgb(33,37,41);
 }
 
 .footer-nav-a{
