@@ -7,6 +7,13 @@
 nav, footer{
   background-color: rgb(34, 34, 34);
 }
+.menu-nav li{
+  padding: 1px 2px;
+}
+.menu-nav li:hover{
+  border-bottom: 2px white solid;
+  padding: 0px 2px;
+}
 .logo-img{
   width: 50px;
   margin-top: -10px;
