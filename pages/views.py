@@ -23,11 +23,6 @@ def categories(request):
     categories = Categories.objects.all() 
     return render(request, 'pages/categories.html', {'categories':categories})
 
-# Function based view for slug
-def category(request, slug): 
-    category = Categories.objects.get(slug=slug)
-    return render(request, 'pages/category.html', {'category': category})
-
 def BookreqView(request):
     return render(request, 'pages/bookreq.html')
 
