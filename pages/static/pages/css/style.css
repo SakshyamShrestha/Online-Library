@@ -35,12 +35,12 @@ nav, footer{
   background-color: 33AEFF;
 }
 .center-text{
-  background-color: rgb(33,37,41);
   border-radius: 20px;
   background-size:auto;
   color: white;
   margin-top: 15%;
   padding: 1% 2% 1% 2%;
+  background-color: rgb(33,37,41);
 }
 
 .footer-nav-a{
