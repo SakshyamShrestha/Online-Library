@@ -1,13 +1,17 @@
 {% extends 'pages/base.html' %}
 {% block content %}
+<section class="main_heading my-5">
+  <div class="text-center">
+      <h1 class="display-4"> Request a book </h1>
+      <hr class="w-25 mx-auto">
+  </div>
 <div class="container py-5">
   <div class="row">
-    <h1 class="py-3 text-center">Request a Book</h1>
     <div class="col">
       <div class="card">
         <div class="card-header bg-primary text-white">
           <i class="fa fa-request"></i>
-          Request a Book
+          Enter details
         </div>
         <div class="card-body">
           <form method="POST" action="/new_bookreq/">
