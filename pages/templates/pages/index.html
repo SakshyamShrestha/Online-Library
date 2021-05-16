@@ -6,21 +6,23 @@
 </div>
 
 <h4 class="py-5 container">Available Books</h4>
+
 <section class="container">
 
 <div class="row row-cols-1 row-cols-md-6 g-4"> 
+
   {% for page in all_pages_list %}
+
   <div class="col">
     <div class="card h-100">
         <img src="{{page.image.url}}" class="card-img-top" alt="book img">
       <div class="card-body">
 		  <h6 class="card-title">{{ page.title }}</h6>
+      <p class="card-text">{{ page.category }}</p>
       </div>
     </div>
   </div> 
   {% endfor %}
 </div>
-
-
 </section> 
 {% endblock content %}
