@@ -1,3 +1,4 @@
+<!-- loads static files  -->
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -7,21 +8,27 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-nav">
+          <!-- home page  -->
           <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
           </li>
+          <!-- categories page  -->
           <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url 'categories' %}">Categories</a>
           </li>
+          <!-- request book page  -->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url 'bookreq' %}">Request Book</a>
           </li>
+          <!-- faq page  -->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url 'faq' %}">FAQs</a>
           </li>
+          <!-- contact page  -->
           <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact</a>
           </li>
+          <!-- user login status -->
           {% if user.is_authenticated %}
           <li class="nav-item">
               <span class="nav-link active">Hello {{ user.username }}</span>
@@ -29,6 +36,7 @@
           {% endif %}
         </ul>
             <div>
+              <!-- login/logout navbar section  -->
               {% if user.is_authenticated %}
               <a class="nav-link active text-white" aria-current="page" href="{% url 'logout' %}">Logout</a>
               {% else %}

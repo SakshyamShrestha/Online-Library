@@ -1,8 +1,13 @@
 from django.urls import path
+# imports specific views from views.py
 from .views import HomePageView, ContactView, BookreqView, FaqView, new_contact, new_bookreq
+# imports all views from views.py
 from . import views 
 
+#url patterns for the pages
 urlpatterns = [
+    
+    # urls for class as well as function based views 
     path('', HomePageView.as_view(), name='home'),
     path('categories/', views.categories, name='categories'),
     path('contact/', views.ContactView, name='contact'),

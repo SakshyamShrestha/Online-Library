@@ -1,23 +1,29 @@
+/* root variable  */
 :root{
   font-family: 'Roboto', sans-serif;
 }
 .selector-for-some-widget {
   box-sizing: content-box;
 }
+/* footer background  */
 nav, footer{
   background-color: rgb(34, 34, 34);
 }
+/* navigation menu lists  */
 .menu-nav li{
   padding: 1px 2px;
 }
+/* hover effects on navigation menus  */
 .menu-nav li:hover{
   border-bottom: 2px white solid;
   padding: 0px 2px;
 }
+/* logo image  */
 .logo-img{
   width: 50px;
   margin-top: -10px;
 }
+/* style for landing page  */
 .landing-div{
   background-image: url('../images/library.jpg');
   height: 600px;

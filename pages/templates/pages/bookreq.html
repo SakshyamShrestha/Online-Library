@@ -1,46 +1,58 @@
+<!-- extension of base page  -->
 {% extends 'pages/base.html' %}
+<!-- page content starts  -->
 {% block content %}
 <section class="main_heading my-5">
+  <!-- page heading title  -->
   <div class="text-center">
       <h1 class="display-4"> Request a book </h1>
       <hr class="w-25 mx-auto">
   </div>
 </section>
+  <!-- bootstrap container starts  -->
 <div class="container py-5">
   <div class="row">
     <div class="col">
       <div class="card">
+        <!-- form title  -->
         <div class="card-header bg-primary text-white">
           <i class="fa fa-request"></i>
           Enter details
         </div>
         <div class="card-body">
+          <!-- form section  -->
           <form method="POST" action="/new_bookreq/">
 
+            <!-- csrf token used to generate a unique and secret from the server side application -->
             {% csrf_token %}
 
              <div class="form-group py-2">
+               <!-- field for full name  -->
                 <label for="full_name">Full Name</label>
                 <input name="full_name" type="text" class="form-control" id="full_name" placeholder="Enter Full name" required />
             </div>
 
             <div class="form-group py-2">
+              <!-- field for full name  -->
                 <label for="book_name">Book Name</label>
                 <input name="book_name" type="text" class="form-control" id="book_name" placeholder="Enter Book name" required />
             </div>
 
             <div class="form-group py-2">
+              <!-- field for full name  -->
               <label for="email">Email address</label>
               <input
                 name="email" type="email" class="form-control" id="email" placeholder="Enter email" required/>
             </div>
 
             <div class="form-group py-2">
+              <!-- field for full name  -->
                 <label for="date">Return Date</label>
                 <input name="date" type="date" class="form-control" id="date" required/>
               </div>
 
             <div class="mx-auto py-3">
+              <!-- submit button  -->
               <button type="submit" class="btn btn-primary text-right" value = 'save'>
                 Submit
               </button>

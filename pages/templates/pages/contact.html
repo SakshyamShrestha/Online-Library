@@ -1,4 +1,6 @@
+<!-- extension of base page  -->
 {% extends 'pages/base.html' %}
+<!-- contact content starts  -->
 {% block content %}
 <section class="main_heading my-5">
   <div class="text-center">
@@ -6,32 +8,42 @@
       <hr class="w-25 mx-auto">
   </div>
 </section>
+<!-- bootstrap container starts -->
+<!-- py-5 for wrapper div padding  -->
 <div class="container py-5">
   <div class="row">
     <div class="col">
       <div class="card">
         <div class="card-header bg-primary text-white">
+          <!-- mail (envelope) icon  -->
           <i class="fa fa-envelope"></i>
           Contact us.
         </div>
         <div class="card-body">
           <form method="POST" action="/new_contact/">
+            <!-- csrf token used to generate a unique and secret from the server side application -->
             {% csrf_token %}
+
+            <!-- form section  -->
             <div class="form-group py-3">
+              <!-- user's full name  -->
               <label for="name">Full Name</label>
               <input name="name" type="text" class="form-control" id="name" placeholder="Enter name" required />
             </div>
             <div class="form-group py-3">
+              <!-- user's email address  -->
               <label for="email">Email address</label>
               <input
                 name="email" type="email" class="form-control" id="email" placeholder="Enter email" required/>
             </div>
             <div class="form-group py-3">
+              <!-- user's message to the librarian  -->
               <label for="message">Message</label>
               <textarea name="message" class="form-control" id="message" rows="6" required >
               </textarea>
             </div>
             <div class="mx-auto py-3">
+              <!-- submit button  -->
               <button type="submit" class="btn btn-primary text-right" value = 'save'>
                 Submit
               </button>
@@ -42,6 +54,7 @@
     </div>
     <div class="col-12 col-sm-4">
       <div class="card bg-light mb-3">
+        <!-- contact details section  -->
         <div class="card-header bg-success text-white text-uppercase">
           <i class="fa fa-home"></i> Address
         </div>

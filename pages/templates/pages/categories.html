@@ -1,26 +1,34 @@
+<!-- extension of base page  -->
 {% extends 'pages/base.html' %} 
+<!-- categories block starts  -->
 {% block content %}
 
 <section class="main_heading my-5">
   <div class="text-center">
+    <!-- page title  -->
       <h1 class="display-4"> Categories </h1>
       <hr class="w-25 mx-auto">
   </div>
 </section>
 
 <section class="cat-body container py-5">
+  <!-- list group division  -->
   <div class="list-group">
     <a
       href="#"
       class="list-group-item list-group-item-action bg-dark active py-4"
     >Book Genres
     </a>
-
+    <!-- for loop to fetch category from the categories table in database  -->
 	  {% for category in categories%}
+    <!-- bootstrap list group  -->
     <a class="list-group-item list-group-item-action py-3"
 				>{{ category }}</a
     >
+    <!-- end of for loop  -->
 	{% endfor %}
   </div>
 </section>
+<!-- category block ends  -->
 {% endblock content %}
+

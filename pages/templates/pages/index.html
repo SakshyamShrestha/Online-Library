@@ -1,28 +1,42 @@
+<!-- extension of base page  -->
 {% extends 'pages/base.html' %}
+<!-- loads static files  -->
 {% load static %}
+<!-- index block starts  -->
 {% block content %}
 <div class="landing-div container">
   <div class="d-flex justify-content-center "><h2 class="center-text">Welcome to Online Library System</h2></div>
 </div>
 
+<!-- section heading -->
 <h4 class="py-5 container">Available Books</h4>
 
+<!-- bootstrap container  -->
 <section class="container">
 
+  <!-- bootstrap row  -->
 <div class="row row-cols-1 row-cols-md-6 g-4"> 
 
+  <!-- for loop to render all data form the book table  -->
   {% for page in all_pages_list %}
 
+  <!-- bootstrap column  -->
   <div class="col">
+    <!-- Card display -->
     <div class="card h-100">
+        <!-- renders book images form books table  -->
         <img src="{{page.image.url}}" class="card-img-top" alt="book img">
       <div class="card-body">
+        <!-- renders book's title form books table  -->
 		  <h6 class="card-title">{{ page.title }}</h6>
+        <!-- renders book's category form books table  -->
       <p class="card-text">{{ page.category }}</p>
       </div>
     </div>
   </div> 
+  <!-- end of for loop  -->
   {% endfor %}
 </div>
 </section> 
+<!-- end of index block  -->
 {% endblock content %}
